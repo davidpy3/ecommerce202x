@@ -29,8 +29,6 @@ export class AdminService {
     
     const token = localStorage.getItem('token');
 
-    
-
     if (!token) {
       return false;
     }
@@ -38,7 +36,7 @@ export class AdminService {
       const helper = new JwtHelperService();
       var decodedToken = helper.decodeToken(token);
 
-      // console.log(decodedToken);
+      console.log(decodedToken);
 
       if (!decodedToken) {
         console.log('no acceso')
@@ -51,8 +49,8 @@ export class AdminService {
       return false;
     }
 
-    // return allowRoles.includes(decodedToken['role']);
-    return true;
+    return allowRoles.includes(decodedToken['rol']);
+    
   }
 
   

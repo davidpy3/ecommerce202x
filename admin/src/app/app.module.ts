@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
 
 //modulos importados
 import { FormsModule} from "@angular/forms";
@@ -31,7 +32,8 @@ import { IndexClienteComponent } from './components/clientes/index-cliente/index
     FormsModule,
     // HttpClient,
     HttpClientModule,
-    routing
+    routing,
+    NgbPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
